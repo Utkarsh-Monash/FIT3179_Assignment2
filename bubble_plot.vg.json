@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 600,
-  "height": 400,
+  "width": "container",
+  "height": 300,
   "title": [
     "Relationship between trade and GDP per capita (2010-2018)",
     "_____________________________________________________________"

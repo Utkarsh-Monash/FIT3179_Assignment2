@@ -130,30 +130,27 @@
 
 
 <footer style="background-color:papayawhip;height:100px"> </footer>
+<script type="text/javascript">
 
-
-var vg_map = "visualisation/map_combined.vg.json";
-var vg_rank = "visualisation/rank_chart.vg.json";
-var vg_bubble = "visualisation/bubble_plot.vg.json";
-var vg_line = "visualisation/line_charts.vg.json";
-
-<script>
-
-vegaEmbed("#viz1", vg_map  , { "actions": false }).then(function(result) {
+  var spec1 = "https://raw.githubusercontent.com/Utkarsh-Monash/FIT3179_Assignment2/main/map_combined.vg.json";
+  vegaEmbed("#viz1", spec1, { "actions": false }).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-}).catch(console.error);
-
-vegaEmbed("#viz2", vg_rank, { "actions": false }).then(function(result) {
+  }).catch(console.error);
+ 
+  var spec2 = "https://raw.githubusercontent.com/Utkarsh-Monash/FIT3179_Assignment2/main/rank_chart.vg.json";
+  vegaEmbed("#viz2", spec2, { "actions": false }).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-}).catch(console.error);
-
-vegaEmbed("#viz3", vg_bubble, { "actions": false }).then(function(result) {
+  }).catch(console.error);
+  
+  var spec3 = "https://raw.githubusercontent.com/Utkarsh-Monash/FIT3179_Assignment2/main/bubble_plot.vg.json";
+  vegaEmbed("#viz3", spec3, { "actions": false }).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-}).catch(console.error);
-
-vegaEmbed("#viz4", vg_line, { "actions": false }).then(function(result) {
+  }).catch(console.error);
+  
+  var spec4 = "https://raw.githubusercontent.com/Utkarsh-Monash/FIT3179_Assignment2/main/line_charts.vg.json";
+  vegaEmbed("#viz4", spec4, { "actions": false }).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-}).catch(console.error);
+  }).catch(console.error);
 
 </script>
 </body>

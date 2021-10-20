@@ -131,24 +131,24 @@
 <footer style="background-color:papayawhip;height:100px"> </footer>
 <script type="text/javascript">
 
-  var spec1 = "js/map_combined.vg.json.vg.json";
+  var spec1 = "https://raw.githubusercontent.com/Utkarsh-Monash/FIT3179_Assignment2/main/map_combined.vg.json";
   vegaEmbed('#viz1', spec1).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
  
-  var spec2 = "js/rank_chart.vg.json";
+  var spec2 = "https://raw.githubusercontent.com/Utkarsh-Monash/FIT3179_Assignment2/main/rank_chart.vg.json";
   vegaEmbed('#viz2', spec2).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
     vegaEmbed('#viz2', spec2, {"actions": false});
   }).catch(console.error);
   
-  var spec3 = "js/bubble_plot.vg.json";
+  var spec3 = "https://raw.githubusercontent.com/Utkarsh-Monash/FIT3179_Assignment2/main/bubble_plot.vg.json";
     vegaEmbed('#viz3', spec3).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
       vegaEmbed('#viz3', spec3, {"actions": false});
   }).catch(console.error);
   
-  var spec4 = "js/line_charts.vg.json";
+  var spec4 = "https://raw.githubusercontent.com/Utkarsh-Monash/FIT3179_Assignment2/main/line_charts.vg.json";
     vegaEmbed('#viz4', spec4).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
       vegaEmbed('#viz4', spec4, {"actions": false});

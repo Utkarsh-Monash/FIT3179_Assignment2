@@ -41,3 +41,11 @@
 .regular_section {
 	height: 550px;
 }
+
+ .page{
+    width: 1200px;    
+    background-color: papayawhip;   
+    margin: auto;
+    padding: 50px;
+    padding-top: 35px;
+ }

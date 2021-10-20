@@ -8,8 +8,8 @@
 
     "hconcat": [
         {
-            "width": 180,
-            "height": 160,
+            "width": 270,
+            "height": 300,
             "title": "Mortality rate under 5 (per 1,000 live births)",
             "encoding": {
                 "x": {
@@ -152,8 +152,8 @@
                     "value": 0.2
                 }
             },
-            "width": 180,
-            "height": 160,
+            "width": 270,
+            "height": 300,
             "layer": [{
                     "params": [{
                         "name": "hover",
@@ -214,8 +214,8 @@
             ]
         },
         {
-            "width": 180,
-            "height": 160,
+            "width": 270,
+            "height": 300,
             "title": "Life satisfaction (in Cantril Ladder)",
             "encoding": {
                 "x": {
@@ -313,36 +313,6 @@
                 }
             ]
         }
-    ],
-    "config": {
-
-    "axis": {"labelFont": "Avenir", "titleFont": "Avenir",
-      "labelFontSize": 12, "titleFontSize": 13},
-    "mark": {"font": "Avenir",
-      "fontSize": 12},
-      "legend": {
-        "labelFont": "Avenir"
-      },
-      "title": {
-        "anchor":"middle",
-        "font": "Avenir",
-        "fontSize": 20,
-        "fontWeight": 750,
-        "color": "#02160a"
-      },
-      "concat": {
-        "spacing":50
-      },
-      "style": {
-        "cell": {
-          "stroke": "transparent"
-        }
-      },
-      "text": {
-        "baseline": "bottom",
-        "align": "center",
-        "fontWeight": "bold",
-        "font": "Avenir"
-      }
-  }
+    ]
+  
 }

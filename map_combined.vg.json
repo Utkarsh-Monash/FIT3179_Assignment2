@@ -133,7 +133,7 @@
       "hconcat": [
         {
           "height": 120,
-          "width": 499,
+          "width": 420,
           "title": {
             "text": [
               "GDP (current US$) in 2010-2020", "_______________________________"
@@ -187,7 +187,7 @@
         },
         {
           "height": 140,
-          "width": 499,
+          "width": 420,
           "data": {
             "url": "https://raw.githubusercontent.com/Utkarsh-Monash/datavis_2/main/data/unemployment.csv"
           },

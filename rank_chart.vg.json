@@ -1,5 +1,5 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "title": {
           "text": [
             "Top 10 Countries for with the highest Unemployment rate for 2010-2020", "_______________________________________________________________________"

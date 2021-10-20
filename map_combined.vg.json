@@ -2,7 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "description": "Waterfall chart",
   "padding": 5,
-  "hconcat": [
+  "vconcat": [
     {
       "title": {
         "text": ["GDP per Capita (2020)", "___________________________________________________"
@@ -130,10 +130,10 @@
       ]
     },
     {
-      "vconcat": [
+      "hconcat": [
         {
           "height": 120,
-          "width": 299,
+          "width": 499,
           "title": {
             "text": [
               "GDP (current US$) in 2010-2020", "_______________________________"
@@ -187,7 +187,7 @@
         },
         {
           "height": 140,
-          "width": 300,
+          "width": 499,
           "data": {
             "url": "https://raw.githubusercontent.com/Utkarsh-Monash/datavis_2/main/data/unemployment.csv"
           },

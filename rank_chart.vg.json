@@ -1,97 +1,59 @@
 {
-  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-  "title": {
-    "text": [
-      "Top 10 Countries for with the highest Unemployment rate for 2010-2020",
-      "_______________________________________________________________________"
-    ]
-  },
-  "width": 900,
-  "height": 500,
-  "data": {
-    "url": "https://raw.githubusercontent.com/Utkarsh-Monash/datavis_2/main/data/unemploymentrank.csv"
-  },
-  "layer": [
+    "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+    "title": {
+          "text": [
+            "Top 10 Countries for with the highest Unemployment rate for 2010-2020", "_______________________________________________________________________"
+          ]
+        },
+    "width":900,
+    "height":500,
+    "data": {
+      "url": "https://raw.githubusercontent.com/Utkarsh-Monash/FIT3179_Assignment2/main/data/unemploymentrank.csv"
+    },
+    "layer": [
     {
       "mark": {"type": "line", "orient": "vertical"},
       "encoding": {
         "x": {"field": "Year", "type": "ordinal"},
-        "y": {"field": "Rank", "type": "quantitative", "sort": "descending"},
-        "color": {"field": "Country", "type": "nominal"}
+        "y": {"field": "Rank", "type": "quantitative", "sort":"descending"},
+        "color": {
+          "field": "Country", "type": "nominal"
+        }
       }
     },
-    {
-      "mark": {"type": "circle"},
-      "encoding": {
+    {"mark": {"type": "circle"},
+    "encoding": {
         "x": {"field": "Year", "type": "ordinal"},
-        "y": {"field": "Rank", "type": "quantitative", "sort": "descending"},
-        "size": {"value": 1500},
+        "y": {"field": "Rank",  "type": "quantitative", "sort":"descending"},
+        "size": {"value":1500},
         "color": {
-          "field": "Country",
-          "type": "nominal",
+          "field": "Country", "type": "nominal",
           "scale": {
-            "domain": [
-              "Macedonia",
-              "Bosnia and Herz.",
-              "Eswatini ",
-              "Lesotho",
-              "South Africa",
-              "Namibia",
-              "Palestine",
-              "Gabon",
-              "Georgia",
-              "Montenegro",
-              "Spain",
-              "Greece",
-              "Saint Lucia",
-              "SVG",
-              "Libya",
-              "Serbia",
-              "Armenia",
-              "Jordan"
-            ],
-            "range": [
-              "#ff7f00",
-              "#a6cee3",
-              "#1f78b4",
-              "#88ef13",
-              "#b59762",
-              "#33a02c",
-              "#ef3b2c",
-              "#cc4c02",
-              "#fc8d62",
-              "#6a3d9a",
-              "#8da0cb",
-              "#94e8ed",
-              "#66c2a5",
-              "#de77ae",
-              "#80cdc1",
-              "#7fbc41",
-              "#fc9272",
-              "#bdbdbd"
-            ]
+            "domain": ["Macedonia", "BiH", "Eswatini ","Lesotho", "South Africa","Namibia","Palestine","Gabon","Georgia","Montenegro", "Spain","Greece","Saint Lucia","SVG", "Libya", "Serbia","Armenia", "Jordan"],
+            "range": ["#ff7f00", "#a6cee3","#1f78b4","#88ef13","#b59762", "#33a02c","#ef3b2c","#cc4c02","#fc8d62","#6a3d9a","#8da0cb", "#94e8ed","#66c2a5","#de77ae", "#80cdc1", "#7fbc41", "#fc9272", "#bdbdbd"]
           }
         }
       }
     },
-    {
-      "mark": {"type": "text"},
-      "encoding": {
+    {"mark": {"type": "text"},
+    "encoding": {
         "x": {"field": "Year", "type": "ordinal"},
-        "y": {"field": "Rank", "type": "quantitative", "sort": "descending"},
+        "y": {"field": "Rank", "type": "quantitative", "sort":"descending"},
         "text": {"field": "Country", "type": "nominal"},
-        "color": {"value": "black"},
+        "color": {"value":"black"},
         "tooltip": [
-          {"field": "Country", "type": "nominal"},
+          {
+            "field": "Country",
+            "type": "nominal"
+          },
           {
             "field": "Unemployment (% of total labour force)",
             "type": "quantitative"
           }
         ]
       }
-    }
-  ],
-  "config": {
+    }],
+    "config": {
     "axis": {
       "labelFont": "Avenir",
       "titleFont": "Avenir",
@@ -103,11 +65,26 @@
       "titleFont": "Avenir",
       "labelFontSize": 12
     },
-    "mark": {"font": "Avenir", "fontSize": 12},
-    "legend": {"labelFont": "Avenir"},
-    "title": {"font": "Avenir", "fontSize": 19, "color": "#000a08"},
-    "concat": {"spacing": 30},
-    "style": {"cell": {"stroke": "transparent"}},
+    "mark": {
+      "font": "Avenir",
+      "fontSize": 12
+    },
+    "legend": {
+      "labelFont": "Avenir"
+    },
+    "title": {
+      "font": "Avenir",
+      "fontSize": 19,
+      "color": "#000a08"
+    },
+    "concat": {
+      "spacing": 30
+    },
+    "style": {
+      "cell": {
+        "stroke": "transparent"
+      }
+    },
     "text": {
       "baseline": "bottom",
       "align": "center",

@@ -6,8 +6,8 @@
       "_______________________________________________________________________"
     ]
   },
-  "width": "container",
-  "height": 400,
+  "width": 1300,
+  "height": 500,
   "data": {
     "url": "https://raw.githubusercontent.com/Utkarsh-Monash/datavis_2/main/data/unemploymentrank.csv"
   },

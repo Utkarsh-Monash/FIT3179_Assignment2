@@ -1,0 +1,210 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Waterfall chart",
+  "padding": 5,
+  "hconcat": [
+    {
+      "title": {
+        "text": [
+          "GDP per Capita (2020)",
+          "_____________________________________________________________"
+        ]
+      },
+      "height": 460,
+      "width": 800,
+      "data": {
+        "url": "https://raw.githubusercontent.com/Utkarsh-Monash/datavis_2/main/json/ne_110m_admin_0_countries.topojson",
+        "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
+      },
+      "transform": [
+        {
+          "lookup": "properties.NAME",
+          "from": {
+            "data": {
+              "url": "https://raw.githubusercontent.com/Utkarsh-Monash/datavis_2/main/data/gdp.csv"
+            },
+            "key": "Country",
+            "fields": ["GDP", "Year", "Country"]
+          }
+        },
+        {"calculate": "datum.GDP", "as": "GDP"}
+      ],
+      "layer": [
+        {
+          "selection": {
+            "country": {
+              "type": "multi",
+              "init": {"Country": "Russia"},
+              "fields": ["Country"],
+              "on": "click",
+              "resolve": "global",
+              "empty": "none"
+            },
+            "highlight": {"type": "single", "empty": "none", "on": "mouseover"}
+          },
+          "projection": {"type": "equalEarth"},
+          "mark": {"type": "geoshape", "strokeWidth": 0.6, "stroke": "#003735"},
+          "encoding": {
+            "color": {
+              "condition": [
+                {"selection": "country", "value": "white"},
+                {"test": "datum.GDP < 1", "value": "#D3D3D3"},
+                {"selection": "highlight", "value": "white"}
+              ],
+              "field": "GDP",
+              "type": "quantitative",
+              "scale": {
+                "range": [
+                  "#ffffcc",
+                  "#c7e9b4",
+                  "#7fcdbb",
+                  "#41b6c4",
+                  "#1d91c0",
+                  "#225ea8",
+                  "#0c2c84"
+                ],
+                "type": "bin-ordinal",
+                "domain": [1000, 5000, 10000, 20000, 30000, 40000, 50000]
+              }
+            },
+            "tooltip": [
+              {"field": "Country", "type": "nominal"},
+              {"field": "GDP", "type": "quantitative"}
+            ]
+          }
+        },
+        {
+          "mark": {
+            "type": "text",
+            "fontSize": 18,
+            "dy": -210,
+            "color": "#0e3b4dcb"
+          },
+          "encoding": {
+            "text": {
+              "condition": {
+                "selection": "country",
+                "field": "Country",
+                "type": "nominal"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "vconcat": [
+        {
+          "height": 120,
+          "width": 400,
+          "title": {
+            "text": [
+              "GDP (current US$) in 2010-2020",
+              "_______________________________"
+            ],
+            "offset": 10
+          },
+          "data": {
+            "url": "https://raw.githubusercontent.com/Utkarsh-Monash/datavis_2/main/data/gdp.csv"
+          },
+          "transform": [{"filter": {"selection": "country"}}],
+          "mark": {
+            "type": "area",
+            "line": {"color": "#1f78b4"},
+            "color": {
+              "x1": 1,
+              "y1": 1,
+              "x2": 1,
+              "y2": 0,
+              "gradient": "linear",
+              "stops": [
+                {"offset": 0, "color": "white"},
+                {"offset": 1, "color": "#1f78b4"}
+              ]
+            }
+          },
+          "encoding": {
+            "x": {"field": "Year", "type": "ordinal"},
+            "y": {
+              "field": "GDP",
+              "title": "GDP per capita",
+              "type": "quantitative"
+            }
+          }
+        },
+        {
+          "height": 140,
+          "width": 400,
+          "data": {
+            "url": "https://raw.githubusercontent.com/Utkarsh-Monash/datavis_2/main/data/unemployment.csv"
+          },
+          "title": {
+            "text": [
+              "Unemployment rate (% of total labour force)",
+              "___________________________________________"
+            ]
+          },
+          "encoding": {
+            "x": {"field": "Year", "type": "ordinal"},
+            "y": {
+              "field": "Unemployment",
+              "type": "quantitative",
+              "axis": {"title": "Unemployment Rate (%)"}
+            }
+          },
+          "layer": [
+            {
+              "mark": "bar",
+              "encoding": {
+                "color": {
+                  "field": "Year",
+                  "type": "ordinal",
+                  "legend": null,
+                  "scale": {"range": ["#2b83ba"]}
+                }
+              },
+              "transform": [{"filter": {"selection": "country"}}]
+            },
+            {
+              "mark": "text",
+              "encoding": {
+                "y": {"field": "Unemployment", "type": "quantitative"},
+                "text": {
+                  "format": ".2f",
+                  "field": "Unemployment",
+                  "type": "quantitative"
+                }
+              },
+              "transform": [{"filter": {"selection": "country"}}]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "config": {
+    "axis": {
+      "labelFont": "Avenir",
+      "titleFont": "Avenir",
+      "labelFontSize": 13,
+      "titleFontSize": 14
+    },
+    "header": {
+      "labelFont": "Avenir",
+      "titleFont": "Avenir",
+      "labelFontSize": 12
+    },
+    "mark": {"font": "Avenir", "fontSize": 12},
+    "legend": {"labelFont": "Avenir"},
+    "title": {"font": "Avenir", "fontSize": 19, "color": "#000a08"},
+    "concat": {"spacing": 30},
+    "style": {"cell": {"stroke": "transparent"}},
+    "text": {
+      "baseline": "bottom",
+      "align": "center",
+      "fontWeight": "bold",
+      "font": "avenir"
+    },
+    "background": "papayawhip"
+  }
+}

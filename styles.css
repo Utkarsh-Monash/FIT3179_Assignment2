@@ -1,0 +1,43 @@
+#viz1 {
+	top:5px;
+	bottom: 100px; 
+	left: 100px;
+	right: 100px;
+	/*height: 1000px;
+	width: 800px;*/
+}
+
+#viz2 {
+	top:5px;
+	bottom: 100px; 
+	left: 100px;
+	right: 100px;
+	/*height: 1000px;
+	width: 800px;*/
+}
+
+#viz3 {
+	top:5px;
+	bottom: 100px; 
+	left: 100px;
+	right: 100px;
+	/*height: 1000px;
+	width: 800px;*/	
+}
+
+#viz4 {
+	top:5px;
+	bottom: 100px; 
+	left: 100px;
+	right: 100px;
+	/*height: 1000px;
+	width: 800px;*/	
+}
+
+.section_claass {
+	height: 600px;
+}
+
+.regular_section {
+	height: 550px;
+}

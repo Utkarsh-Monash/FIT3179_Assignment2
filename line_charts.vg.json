@@ -1,0 +1,215 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/Utkarsh-Monash/datavis_2/main/data/linevis.csv"
+  },
+  "title": [
+    "Change in Mortality rate, Urban Population and Life satisfaction of countries over time",
+    "___________________________________________________________________________________"
+  ],
+  "background": "papayawhip",
+  "hconcat": [
+    {
+      "width": 300,
+      "height": 160,
+      "title": "Mortality rate under 5 (per 1,000 live births)",
+      "encoding": {
+        "x": {
+          "field": "Year",
+          "type": "temporal",
+          "title": "Year",
+          "axis": {"labelAngle": 270, "tickCount": 17}
+        },
+        "y": {
+          "field": "Mortality rate",
+          "type": "quantitative",
+          "title": "Child Mortality rate (%)",
+          "scale": {"domain": [0, 10]}
+        },
+        "color": {
+          "condition": {
+            "param": "hover",
+            "field": "Country",
+            "type": "nominal",
+            "legend": null
+          },
+          "value": "grey"
+        },
+        "opacity": {"condition": {"param": "hover", "value": 1}, "value": 0.2}
+      },
+      "layer": [
+        {
+          "params": [
+            {
+              "name": "hover",
+              "value": [{"Country": "India"}],
+              "select": {
+                "type": "point",
+                "fields": ["Country"],
+                "on": "mouseover"
+              }
+            }
+          ],
+          "mark": {"type": "line", "strokeWidth": 8, "stroke": "transparent"}
+        },
+        {"mark": "line"},
+        {
+          "encoding": {
+            "x": {"aggregate": "max", "field": "Year", "type": "temporal"},
+            "y": {"aggregate": {"argmax": "Year"}, "field": "Mortality rate"}
+          },
+          "layer": [
+            {"mark": {"type": "circle"}},
+            {
+              "mark": {"type": "text", "align": "left", "dx": 4},
+              "encoding": {"text": {"field": "Country", "type": "nominal"}}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Urban Population (% of total population)",
+      "encoding": {
+        "x": {
+          "field": "Year",
+          "type": "temporal",
+          "title": "Year",
+          "axis": {"labelAngle": 270, "tickCount": 17}
+        },
+        "y": {
+          "field": "Urban population",
+          "type": "quantitative",
+          "title": "Urban Population (%)",
+          "scale": {"domain": [0, 100]}
+        },
+        "color": {
+          "condition": {
+            "param": "hover",
+            "field": "Country",
+            "type": "nominal",
+            "legend": null
+          },
+          "value": "grey"
+        },
+        "opacity": {"condition": {"param": "hover", "value": 1}, "value": 0.2}
+      },
+      "width": 300,
+      "height": 160,
+      "layer": [
+        {
+          "params": [
+            {
+              "name": "hover",
+              "value": [{"Country": "India"}],
+              "select": {
+                "type": "point",
+                "fields": ["Country"],
+                "on": "mouseover"
+              }
+            }
+          ],
+          "mark": {"type": "line", "strokeWidth": 8, "stroke": "transparent"}
+        },
+        {"mark": "line"},
+        {
+          "encoding": {
+            "x": {"aggregate": "max", "field": "Year", "type": "temporal"},
+            "y": {"aggregate": {"argmax": "Year"}, "field": "Urban population"}
+          },
+          "layer": [
+            {"mark": {"type": "circle"}},
+            {
+              "mark": {"type": "text", "align": "left", "dx": 4},
+              "encoding": {"text": {"field": "Country", "type": "nominal"}}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "width": 300,
+      "height": 160,
+      "title": "Life satisfaction (in Cantril Ladder)",
+      "encoding": {
+        "x": {
+          "field": "Year",
+          "type": "temporal",
+          "title": "Year",
+          "axis": {"labelAngle": 270, "tickCount": 17}
+        },
+        "y": {
+          "field": "Life satisfaction",
+          "type": "quantitative",
+          "title": "Life satisfaction",
+          "scale": {"domain": [0, 10]}
+        },
+        "color": {
+          "condition": {
+            "param": "hover",
+            "field": "Country",
+            "type": "nominal",
+            "legend": null
+          },
+          "value": "grey"
+        },
+        "opacity": {"condition": {"param": "hover", "value": 1}, "value": 0.2}
+      },
+      "layer": [
+        {
+          "params": [
+            {
+              "name": "hover",
+              "value": [{"Country": "India"}],
+              "select": {
+                "type": "point",
+                "fields": ["Country"],
+                "on": "mouseover"
+              }
+            }
+          ],
+          "mark": {"type": "line", "strokeWidth": 8, "stroke": "transparent"}
+        },
+        {"mark": "line"},
+        {
+          "encoding": {
+            "x": {"aggregate": "max", "field": "Year", "type": "temporal"},
+            "y": {"aggregate": {"argmax": "Year"}, "field": "Life satisfaction"}
+          },
+          "layer": [
+            {"mark": {"type": "circle"}},
+            {
+              "mark": {"type": "text", "align": "left", "dx": 4},
+              "encoding": {"text": {"field": "Country", "type": "nominal"}}
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "config": {
+    "axis": {
+      "labelFont": "Avenir",
+      "titleFont": "Avenir",
+      "labelFontSize": 12,
+      "titleFontSize": 13
+    },
+    "mark": {"font": "Avenir", "fontSize": 12},
+    "legend": {"labelFont": "Avenir"},
+    "title": {
+      "anchor": "middle",
+      "font": "Avenir",
+      "fontSize": 20,
+      "fontWeight": 750,
+      "color": "#02160a"
+    },
+    "concat": {"spacing": 50},
+    "style": {"cell": {"stroke": "transparent"}},
+    "text": {
+      "baseline": "bottom",
+      "align": "center",
+      "fontWeight": "bold",
+      "font": "Avenir"
+    }
+  }
+}

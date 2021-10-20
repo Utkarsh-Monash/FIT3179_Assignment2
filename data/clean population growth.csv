@@ -1,0 +1,67 @@
+Entity,Year,Population growth rate (percentage)
+Africa,2010,2.57
+Africa,2011,2.58
+Africa,2012,2.59
+Africa,2013,2.59
+Africa,2014,2.58
+Africa,2015,2.56
+Africa,2016,2.55
+Africa,2017,2.53
+Africa,2018,2.50
+Africa,2019,2.47
+Africa,2020,2.44
+Asia,2010,1.09
+Asia,2011,1.07
+Asia,2012,1.05
+Asia,2013,1.03
+Asia,2014,1.00
+Asia,2015,0.98
+Asia,2016,0.96
+Asia,2017,0.93
+Asia,2018,0.90
+Asia,2019,0.87
+Asia,2020,0.84
+Europe,2010,0.20
+Europe,2011,0.19
+Europe,2012,0.18
+Europe,2013,0.18
+Europe,2014,0.17
+Europe,2015,0.17
+Europe,2016,0.16
+Europe,2017,0.14
+Europe,2018,0.12
+Europe,2019,0.08
+Europe,2020,0.04
+Northern America,2010,0.88
+Northern America,2011,0.84
+Northern America,2012,0.80
+Northern America,2013,0.76
+Northern America,2014,0.74
+Northern America,2015,0.71
+Northern America,2016,0.68
+Northern America,2017,0.66
+Northern America,2018,0.64
+Northern America,2019,0.62
+Northern America,2020,0.61
+Oceania,2010,1.73
+Oceania,2011,1.64
+Oceania,2012,1.57
+Oceania,2013,1.52
+Oceania,2014,1.48
+Oceania,2015,1.45
+Oceania,2016,1.42
+Oceania,2017,1.38
+Oceania,2018,1.35
+Oceania,2019,1.31
+Oceania,2020,1.28
+South America,2010,1.03
+South America,2011,1.01
+South America,2012,1.00
+South America,2013,0.98
+South America,2014,0.96
+South America,2015,0.93
+South America,2016,0.91
+South America,2017,0.88
+South America,2018,0.86
+South America,2019,0.84
+South America,2020,0.82

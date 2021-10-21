@@ -10,7 +10,7 @@
   "background": "papayawhip",
   "hconcat": [
     {
-      "width": 200,
+      "width": 190,
       "height": 200,
       "title": "Mortality rate under 5 (per 1,000 live births)",
       "encoding": {
@@ -94,7 +94,7 @@
         },
         "opacity": {"condition": {"param": "hover", "value": 1}, "value": 0.2}
       },
-      "width": 200,
+      "width": 190,
       "height": 200,
       "layer": [
         {
@@ -128,7 +128,7 @@
       ]
     },
     {
-      "width": 200,
+      "width": 190,
       "height": 200,
       "title": "Life satisfaction (in Cantril Ladder)",
       "encoding": {

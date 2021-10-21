@@ -2,10 +2,8 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": 800,
   "height": 400,
-  "title": [
-    "Relationship between trade and GDP per capita (2010-2018)",
-    "_____________________________________________________________"
-  ],
+  "title": ["Relationship between trade and GDP per capita (2010-2018)",
+  "__________________________________________________________________"],
   "data": {
     "url": "https://raw.githubusercontent.com/Utkarsh-Monash/datavis_2/main/data/cleaned%20tradegdp1.csv"
   },
@@ -48,7 +46,9 @@
     }
   ],
   "transform": [
-    {"filter": "datum.Year == Year_slt"},
+    {
+      "filter": "datum.Year == Year_slt"
+    },
     {
       "filter": "Continent_selection == null || datum.Continent == Continent_selection"
     }
@@ -58,24 +58,38 @@
       "field": "GDP",
       "type": "quantitative",
       "title": "GDP per capita (current US$)",
-      "scale": {"type": "log", "base": 2.5},
-      "axis": {"format": ".0f", "values": [1000, 10000, 50000, 100000]}
+      "scale": {
+        "type": "log",
+        "base":2.5
+      },
+      "axis": {
+        "format": ".0f",
+        "values":[1000,10000,50000,100000]
+      }
     },
-    "y": {"field": "Trade (%)", "type": "quantitative"}
+    "y": {
+      "field": "Trade (%)",
+      "type": "quantitative"
+    }
   },
   "layer": [
     {
       "selection": {
         "continent_highlight": {
           "type": "multi",
-          "fields": ["Continent"],
+          "fields": [
+            "Continent"
+          ],
           "bind": "legend"
         }
       },
       "mark": "circle",
       "encoding": {
         "size": {
-          "scale": {"rangeMax": 1500, "rangeMin": 50},
+          "scale": {
+            "rangeMax": 1500,
+            "rangeMin": 50
+          },
           "field": "Population",
           "type": "quantitative",
           "title": "Population Size"
@@ -103,14 +117,31 @@
           }
         },
         "opacity": {
-          "condition": {"selection": "continent_highlight", "value": 0.6},
+          "condition": {
+            "selection": "continent_highlight",
+            "value": 0.6
+          },
           "value": 0.2
         },
         "tooltip": [
-          {"field": "Country", "type": "nominal"},
-          {"field": "Trade (%)", "type": "quantitative", "format": ","},
-          {"field": "GDP", "type": "quantitative", "format": ","},
-          {"field": "Population", "type": "quantitative"}
+          {
+            "field": "Country",
+            "type": "nominal"
+          },
+          {
+            "field": "Trade (%)",
+            "type": "quantitative",
+            "format": ","
+          },
+          {
+            "field": "GDP",
+            "type": "quantitative",
+            "format": ","
+          },
+          {
+            "field": "Population",
+            "type": "quantitative"
+          }
         ]
       }
     },
@@ -120,12 +151,17 @@
         "align": "center",
         "baseline": "middle",
         "fontSize": 10.5,
-        "dy": 5,
+        "dy":5,
         "fontStyle": "bold"
       },
       "encoding": {
-        "text": {"field": "Country", "type": "nominal"},
-        "color": {"value": "black"},
+        "text": {
+          "field": "Country",
+          "type": "nominal"
+        },
+        "color": {
+          "value": "black"
+        },
         "opacity": {
           "condition": {
             "test": "datum['Country'] == 'Russia' || datum['Country'] == 'China' || datum['Country'] == 'Australia' || datum['Country'] == 'New Zealand' || datum['Country'] == 'South Africa' || datum['Country'] == 'India' || datum['Country'] == 'United States' || datum['Country'] == 'Brazil' || datum['Country'] == 'Switzerland' ",
@@ -134,37 +170,58 @@
           "value": 0
         },
         "tooltip": [
-          {"field": "Country", "type": "nominal"},
-          {"field": "Trade (%)", "type": "quantitative", "format": ","},
-          {"field": "GDP", "type": "quantitative", "format": ","},
-          {"field": "Population", "type": "quantitative"}
+          {
+            "field": "Country",
+            "type": "nominal"
+          },
+          {
+            "field": "Trade (%)",
+            "type": "quantitative",
+            "format": ","
+          },
+          {
+            "field": "GDP",
+            "type": "quantitative",
+            "format": ","
+          },
+          {
+            "field": "Population",
+            "type": "quantitative"
+          }
         ]
       }
     }
   ],
   "config": {
-    "axis": {
-      "labelFont": "Avenir",
-      "titleFont": "Avenir",
-      "labelFontSize": 12,
-      "titleFontSize": 13
-    },
-    "mark": {"font": "Avenir", "fontSize": 12},
-    "legend": {"labelFont": "Avenir"},
-    "title": {
-      "anchor": "middle",
-      "font": "Avenir",
-      "fontSize": 19,
-      "color": "#02160a"
-    },
-    "concat": {"spacing": 50},
-    "style": {"cell": {"stroke": "transparent"}},
-    "text": {
-      "baseline": "bottom",
-      "align": "center",
-      "fontWeight": "bold",
-      "font": "Avenir"
-    },
+
+    "axis": {"labelFont": "Avenir", "titleFont": "Avenir",
+      "labelFontSize": 12, "titleFontSize": 13},
+    "mark": {"font": "Avenir",
+      "fontSize": 12},
+      "legend": {
+        "labelFont": "Avenir"
+      },
+      "title": {
+        "anchor":"middle",
+        "font": "Avenir",
+        "fontSize": 19,
+       
+        "color": "#02160a"
+      },
+      "concat": {
+        "spacing":50
+      },
+      "style": {
+        "cell": {
+          "stroke": "transparent"
+        }
+      },
+      "text": {
+        "baseline": "bottom",
+        "align": "center",
+        "fontWeight": "bold",
+        "font": "Avenir"
+      },
     "background": "papayawhip"
   }
 }

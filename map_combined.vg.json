@@ -11,7 +11,7 @@
       "height": 460,
       "width": 750,
       "data": {
-        "url": "https://raw.githubusercontent.com/Utkarsh-Monash/datavis_2/main/json/ne_110m_admin_0_countries.topojson",
+        "url": "https://raw.githubusercontent.com/Utkarsh-Monash/FIT3179_Assignment2/main/ne_110m_admin_0_countries.topojson",
         "format": {
           "type": "topojson",
           "feature": "ne_110m_admin_0_countries"

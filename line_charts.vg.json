@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "data": {
-    "url": "https://raw.githubusercontent.com/Utkarsh-Monash/datavis_2/main/data/linevis.csv"
+    "url": "https://raw.githubusercontent.com/Utkarsh-Monash/FIT3179_Assignment2/main/data/linevis.csv"
   },
   "title": [
     "Change in Mortality rate, Urban Population and Life satisfaction of countries over time",

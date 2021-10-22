@@ -5,7 +5,7 @@
   "title": ["Relationship between trade and GDP per capita (2010-2018)",
   "__________________________________________________________________"],
   "data": {
-    "url": "https://raw.githubusercontent.com/Utkarsh-Monash/datavis_2/main/data/cleaned%20tradegdp1.csv"
+    "url": "https://raw.githubusercontent.com/Utkarsh-Monash/FIT3179_Assignment2/main/data/cleaned%20tradegdp1.csv"
   },
   "params": [
     {

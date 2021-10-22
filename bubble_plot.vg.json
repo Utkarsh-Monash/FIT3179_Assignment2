@@ -164,7 +164,7 @@
         },
         "opacity": {
           "condition": {
-            "test": "datum['Country'] == 'Russia' || datum['Country'] == 'China' || datum['Country'] == 'Australia' || datum['Country'] == 'New Zealand' || datum['Country'] == 'South Africa' || datum['Country'] == 'India' || datum['Country'] == 'United States' || datum['Country'] == 'Brazil' || datum['Country'] == 'Switzerland' ",
+            "test": "datum['Country'] == 'Russia' || datum['Country'] == 'China' || datum['Country'] == 'Australia' || datum['Country'] == 'New Zealand' || datum['Country'] == 'South Africa' || datum['Country'] == 'India' || datum['Country'] == 'United States' || datum['Country'] == 'Brazil' || datum['Country'] == 'Switzerland' || datum['Country'] == 'Burundi'",
             "value": 1
           },
           "value": 0

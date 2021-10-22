@@ -22,7 +22,7 @@
           "lookup": "properties.NAME",
           "from": {
             "data": {
-              "url": "https://raw.githubusercontent.com/Utkarsh-Monash/datavis_2/main/data/gdp.csv"
+              "url": "https://raw.githubusercontent.com/Utkarsh-Monash/FIT3179_Assignment2/main/data/gdp.csv"
             },
             "key": "Country",
             "fields": [
@@ -141,7 +141,7 @@
             "offset": 10
           },
           "data": {
-            "url": "https://raw.githubusercontent.com/Utkarsh-Monash/datavis_2/main/data/gdp.csv"
+            "url": "https://raw.githubusercontent.com/Utkarsh-Monash/FIT3179_Assignment2/main/data/gdp.csv"
           },
           "transform": [
             {

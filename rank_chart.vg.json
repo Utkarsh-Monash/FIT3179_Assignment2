@@ -5,7 +5,7 @@
             "Top 10 Countries for with the highest Unemployment rate for 2010-2020", "_______________________________________________________________________"
           ]
         },
-    "width":1100,
+    "width":800,
     "height":500,
     "data": {
       "url": "https://raw.githubusercontent.com/Utkarsh-Monash/FIT3179_Assignment2/main/data/unemploymentrank.csv"
